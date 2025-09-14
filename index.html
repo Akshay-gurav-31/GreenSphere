@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FasalMitra</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">
+                    <img src="assets/images/logo.png" alt="FasalMitra Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="fallback-logo" style="display:none; width:40px; height:40px; background:var(--primary); border-radius:50%; color:white; font-size:1.5rem; align-items:center; justify-content:center;">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                </div>
+                <div class="logo-text">
+                    <h1>FasalMitra</h1>
+                    <p>Smart Farming Portal</p>
+                </div>
+            </div>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#services">Crop Advisory</a>
+                <a href="#weather">Weather</a>
+                <a href="#market">Market Prices</a>
+
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="nav-cta">
+                <button class="btn btn-primary" onclick="window.location.href='pages/farm-advisor.html'">Get Started</button>
+                <button id="theme-toggle" onclick="toggleTheme()" class="btn btn-outline" style="margin-left: 0.5rem; padding: 8px;">
+                    <i class="fas fa-sun" id="theme-icon"></i>
+                </button>
+            </div>
+
+            <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars" id="mobile-menu-icon"></i>
+            </div>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#home" onclick="closeMobileMenu()">Home</a>
+            <a href="#services" onclick="closeMobileMenu()">Crop Advisory</a>
+            <a href="#weather" onclick="closeMobileMenu()">Weather</a>
+            <a href="#market" onclick="closeMobileMenu()">Market Prices</a>
+
+            <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+            <button class="btn btn-primary mobile-btn" onclick="window.location.href='pages/farm-advisor.html'">Get Started</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <img src="/assets/images/hero-farming.jpg" alt="Smart farming in Punjab">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-badge">
+                <span>Government of Punjab Initiative</span>
+            </div>
+            <h1 class="hero-title">
+                Smart Farming,<br>
+                <span class="hero-gradient-text">Better Future</span>
+            </h1>
+            <p class="hero-subtitle">
+                Personalized crop advisory system for Punjab farmers. Get AI-powered 
+                recommendations, weather forecasts, market prices, and government schemes 
+                - all in one platform.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn btn-hero" onclick="window.location.href='pages/farm-advisor.html'">
+                    Get Crop Advice
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <button class="btn btn-outline" onclick="window.open('https://youtu.be/tSitCyYHUEs?si=52jSy_tSm-FoA20x', '_blank')">
+                    <i class="fas fa-play"></i>
+                    Watch Demo
+                </button>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-dot"></div>
+        </div>
+    </section>
+
+    <!-- Weather Dashboard Section -->
+    <section id="weather" class="weather">
+        <div class="container">
+            <div class="section-header">
+                <h2>Weather & Irrigation Intelligence</h2>
+                <p>Hyper-local weather data combined with smart irrigation recommendations 
+                   to optimize your water usage and crop health.</p>
+            </div>
+            
+            <div class="weather-grid">
+                <div class="weather-main">
+                    <div class="current-weather">
+                        <div class="weather-header">
+                            <div>
+                                <h3>Current Weather</h3>
+                                <p>Ludhiana, Punjab</p>
+                            </div>
+                            <div class="current-temp">
+                                <div class="temp">28°C</div>
+                                <div class="condition">Partly Cloudy</div>
+                            </div>
+                        </div>
+                        
+                        <div class="weather-details">
+                            <div class="weather-item">
+                                <i class="fas fa-tint"></i>
+                                <div>
+                                    <div class="label">Humidity</div>
+                                    <div class="value">65%</div>
+                                </div>
+                            </div>
+                            <div class="weather-item">
+                                <i class="fas fa-wind"></i>
+                                <div>
+                                    <div class="label">Wind</div>
+                                    <div class="value">12 km/h</div>
+                                </div>
+                            </div>
+                            <div class="weather-item">
+                                <i class="fas fa-eye"></i>
+                                <div>
+                                    <div class="label">Visibility</div>
+                                    <div class="value">8 km</div>
+                                </div>
+                            </div>
+                            <div class="weather-item">
+                                <i class="fas fa-cloud-rain"></i>
+                                <div>
+                                    <div class="label">Rainfall</div>
+                                    <div class="value">2.5 mm</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="forecast">
+                            <h4>4-Day Forecast</h4>
+                            <div class="forecast-grid">
+                                <div class="forecast-day">
+                                    <div class="day">Today</div>
+                                    <i class="fas fa-sun"></i>
+                                    <div class="temps">32°/22°</div>
+                                    <div class="rain">0%</div>
+                                </div>
+                                <div class="forecast-day">
+                                    <div class="day">Tomorrow</div>
+                                    <i class="fas fa-cloud-rain"></i>
+                                    <div class="temps">30°/20°</div>
+                                    <div class="rain">10%</div>
+                                </div>
+                                <div class="forecast-day">
+                                    <div class="day">Thu</div>
+                                    <i class="fas fa-cloud-rain"></i>
+                                    <div class="temps">28°/18°</div>
+                                    <div class="rain">80%</div>
+                                </div>
+                                <div class="forecast-day">
+                                    <div class="day">Fri</div>
+                                    <i class="fas fa-sun"></i>
+                                    <div class="temps">31°/21°</div>
+                                    <div class="rain">5%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="irrigation-alerts">
+                    <div class="alerts-header">
+                        <i class="fas fa-tint"></i>
+                        <h3>Irrigation Alerts</h3>
+                    </div>
+                    <div class="alerts-list">
+                        <div class="alert-item medium">
+                            <div class="field">Wheat Field A</div>
+                            <div class="message">Irrigation recommended today</div>
+                        </div>
+                        <div class="alert-item low">
+                            <div class="field">Rice Field B</div>
+                            <div class="message">Wait 2 days - rain expected</div>
+                        </div>
+                        <div class="alert-item high">
+                            <div class="field">Sugarcane C</div>
+                            <div class="message">Urgent irrigation needed</div>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline full-width">
+                        View All Fields
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="weather-insights">
+                <div class="insight-card rain">
+                    <i class="fas fa-cloud-rain"></i>
+                    <h4>Rain Expected</h4>
+                    <p>Heavy rainfall predicted in 48 hours. Delay irrigation for wheat fields.</p>
+                </div>
+                <div class="insight-card temp">
+                    <i class="fas fa-thermometer-half"></i>
+                    <h4>Temperature Alert</h4>
+                    <p>Ideal temperature for rice plantation. Perfect timing for sowing.</p>
+                </div>
+                <div class="insight-card wind">
+                    <i class="fas fa-wind"></i>
+                    <h4>Wind Conditions</h4>
+                    <p>Optimal wind speed for pesticide spraying operations today.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Prices Section -->
+    <section id="market" class="market">
+        <div class="container">
+            <div class="section-header">
+                <h2>Live Market Intelligence</h2>
+                <p>Real-time mandi prices across Punjab with AI-powered price predictions 
+                   to help you make informed selling decisions and maximize profits.</p>
+            </div>
+            
+            <div class="market-grid">
+                <div class="prices-main">
+                    <div class="prices-grid">
+                        <div class="price-card">
+                            <div class="price-header">
+                                <div>
+                                    <h3>Wheat</h3>
+                                    <div class="location"><i class="fas fa-map-marker-alt"></i> Ludhiana Mandi</div>
+                                </div>
+                                <span class="quality-badge">FAQ</span>
+                            </div>
+                            <div class="price-details">
+                                <div class="current-price">
+                                    <i class="fas fa-rupee-sign"></i>
+                                    <span class="amount">2150</span>
+                                    <span class="unit">/quintal</span>
+                                </div>
+                                <div class="price-change positive">
+                                    <i class="fas fa-arrow-up"></i>
+                                    <span>+50 (+2.4%)</span>
+                                </div>
+                            </div>
+                            <div class="price-footer">
+                                <span class="updated">Last updated: 2 hours ago</span>
+                                <button class="btn-link">View Details <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="price-card">
+                            <div class="price-header">
+                                <div>
+                                    <h3>Rice (Basmati)</h3>
+                                    <div class="location"><i class="fas fa-map-marker-alt"></i> Amritsar Mandi</div>
+                                </div>
+                                <span class="quality-badge">Grade A</span>
+                            </div>
+                            <div class="price-details">
+                                <div class="current-price">
+                                    <i class="fas fa-rupee-sign"></i>
+                                    <span class="amount">4200</span>
+                                    <span class="unit">/quintal</span>
+                                </div>
+                                <div class="price-change negative">
+                                    <i class="fas fa-arrow-down"></i>
+                                    <span>-75 (-1.7%)</span>
+                                </div>
+                            </div>
+                            <div class="price-footer">
+                                <span class="updated">Last updated: 2 hours ago</span>
+                                <button class="btn-link">View Details <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="price-card">
+                            <div class="price-header">
+                                <div>
+                                    <h3>Cotton</h3>
+                                    <div class="location"><i class="fas fa-map-marker-alt"></i> Bathinda Mandi</div>
+                                </div>
+                                <span class="quality-badge">Medium</span>
+                            </div>
+                            <div class="price-details">
+                                <div class="current-price">
+                                    <i class="fas fa-rupee-sign"></i>
+                                    <span class="amount">5800</span>
+                                    <span class="unit">/quintal</span>
+                                </div>
+                                <div class="price-change positive">
+                                    <i class="fas fa-arrow-up"></i>
+                                    <span>+120 (+2.1%)</span>
+                                </div>
+                            </div>
+                            <div class="price-footer">
+                                <span class="updated">Last updated: 2 hours ago</span>
+                                <button class="btn-link">View Details <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="price-card">
+                            <div class="price-header">
+                                <div>
+                                    <h3>Maize</h3>
+                                    <div class="location"><i class="fas fa-map-marker-alt"></i> Patiala Mandi</div>
+                                </div>
+                                <span class="quality-badge">Grade I</span>
+                            </div>
+                            <div class="price-details">
+                                <div class="current-price">
+                                    <i class="fas fa-rupee-sign"></i>
+                                    <span class="amount">1850</span>
+                                    <span class="unit">/quintal</span>
+                                </div>
+                                <div class="price-change positive">
+                                    <i class="fas fa-arrow-up"></i>
+                                    <span>+25 (+1.4%)</span>
+                                </div>
+                            </div>
+                            <div class="price-footer">
+                                <span class="updated">Last updated: 2 hours ago</span>
+                                <button class="btn-link">View Details <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="market-sidebar">
+                    <div class="price-alerts">
+                        <div class="alerts-header">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Price Alerts</h3>
+                        </div>
+                        <div class="alert-item opportunity">
+                            <div class="crop">Wheat</div>
+                            <div class="message">Price surge expected next week - Hold your stock</div>
+                        </div>
+                        <div class="alert-item warning">
+                            <div class="crop">Rice</div>
+                            <div class="message">Prices may drop further - Consider selling now</div>
+                        </div>
+                        <div class="alert-item success">
+                            <div class="crop">Cotton</div>
+                            <div class="message">Peak season pricing - Best time to sell</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Complete Farming Solutions</h2>
+                <p>Six powerful tools designed specifically for Punjab farmers to increase productivity, 
+                   reduce costs, and maximize profits through smart technology.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon success">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Smart Crop Recommendation</h3>
+                    <p>Get personalized crop suggestions based on soil type, season, weather patterns, and your land size for maximum yield.</p>
+                    <ul class="service-features">
+                        <li>Soil Analysis</li>
+                        <li>Seasonal Planning</li>
+                        <li>Yield Prediction</li>
+                    </ul>
+                    <button class="btn btn-outline service-btn">
+                        Learn More
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon warning">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <h3>Pest & Disease Detection</h3>
+                    <p>Upload crop images for AI-powered pest and disease identification with instant treatment recommendations.</p>
+                    <ul class="service-features">
+                        <li>Image Analysis</li>
+                        <li>Disease ID</li>
+                        <li>Treatment Plans</li>
+                    </ul>
+                    <button class="btn btn-outline service-btn">
+                        Learn More
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon primary">
+                        <i class="fas fa-cloud-rain"></i>
+                    </div>
+                    <h3>Weather & Irrigation Advisory</h3>
+                    <p>Hyper-local weather forecasts with smart irrigation scheduling to optimize water usage and crop health.</p>
+                    <ul class="service-features">
+                        <li>7-day Forecast</li>
+                        <li>Irrigation Alerts</li>
+                        <li>Rainfall Data</li>
+                    </ul>
+                    <button class="btn btn-outline service-btn">
+                        Learn More
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon earth">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Fertilizer Calculator</h3>
+                    <p>Calculate exact fertilizer requirements based on soil reports and crop needs for eco-friendly farming.</p>
+                    <ul class="service-features">
+                        <li>Soil Testing</li>
+                        <li>NPK Calculation</li>
+                        <li>Organic Options</li>
+                    </ul>
+                    <button class="btn btn-outline service-btn">
+                        Learn More
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon accent">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Market Price Forecasting</h3>
+                    <p>Real-time mandi prices with AI-powered price predictions to help you make informed selling decisions.</p>
+                    <ul class="service-features">
+                        <li>Live Prices</li>
+                        <li>Price Trends</li>
+                        <li>Best Markets</li>
+                    </ul>
+                    <button class="btn btn-outline service-btn">
+                        Learn More
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div class="service-card language-support-card">
+                    <div class="service-icon language">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Multi-Language Support</h3>
+                    <p>Access farming information .</p>
+                    <ul class="service-features">
+                    </ul>
+                    
+                    <!-- Compact Language Selector -->
+                    <div class="compact-language-grid">
+                        <span class="available-text">🌐 Available in:</span>
+                        <div class="compact-lang-buttons">
+                            <button class="lang-selector active" onclick="changeLanguage('en')" data-lang="en" title="English">
+                                🇬🇧
+                            </button>
+                            <button class="lang-selector" onclick="changeLanguage('hi')" data-lang="hi" title="हिंदी">
+                                🇮🇳
+                            </button>
+                            <button class="lang-selector" onclick="changeLanguage('pa')" data-lang="pa" title="ਪੰਜਾਬੀ">
+                                🇮🇳
+                            </button>
+                            <button class="lang-selector" onclick="changeLanguage('mr')" data-lang="mr" title="मराठी">
+                                🇮🇳
+                            </button>
+                            <button class="lang-selector" onclick="changeLanguage('gu')" data-lang="gu" title="ગુજરાતી">
+                                🇮🇳
+                            </button>
+                            <button class="lang-selector" onclick="changeLanguage('ta')" data-lang="ta" title="தமிழ்">
+                                🇮🇳
+                            </button>
+                            <button class="lang-selector" onclick="changeLanguage('te')" data-lang="te" title="తెలుగు">
+                                🇮🇳
+                            </button>
+                            <button class="lang-selector" onclick="changeLanguage('kn')" data-lang="kn" title="ಕನ್ನಡ">
+                                🇮🇳
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-outline service-btn">
+                        Learn More
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+
+            </div>
+
+            <div class="services-cta">
+                <h3>Ready to Transform Your Farming?</h3>
+                <p>Join thousands of Punjab farmers who have increased their yield by 30% 
+                   using our smart advisory platform.</p>
+                <button class="btn btn-cta">
+                    Start Your Journey
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <img src="assets/images/logo.png" alt="FasalMitra Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="fallback-logo" style="display:none; width:40px; height:40px; background:var(--primary); border-radius:50%; color:white; font-size:1.5rem; align-items:center; justify-content:center;">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                        </div>
+                        <div class="logo-text">
+                            <h3>FasalMitra</h3>
+                            <p>Smart Farming Portal</p>
+                        </div>
+                    </div>
+                    <p>Empowering Punjab farmers with smart technology, weather insights, 
+                       market intelligence, and government scheme assistance for better farming outcomes.</p>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>1800-180-1551 (Toll Free)</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>support@punjabkisan.gov.in</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Punjab, India</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#services">Crop Advisory</a></li>
+                        <li><a href="#weather">Weather Forecast</a></li>
+                        <li><a href="#market">Market Prices</a></li>
+
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-support">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">User Guide</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Technical Support</a></li>
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Get the latest farming alerts and scheme updates.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button class="btn btn-primary">Subscribe</button>
+                    </div>
+                    
+                    <div class="language-selector">
+                        <h5>Language</h5>
+                        <div class="languages">
+                            <button class="lang-btn active">English</button>
+                            <button class="lang-btn">हिंदी</button>
+                            <button class="lang-btn">ਪੰਜਾਬੀ</button>
+                        </div>
+                    </div>
+                    
+                    <div class="social-media">
+                        <h5>Follow Us</h5>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-separator"></div>
+            
+            <div class="footer-bottom">
+                <div class="footer-credit">Made by Team Innovisionaries | SIH 2025 Initiative</div>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Accessibility</a>
+                </div>
+            </div>
+            
+            <div class="government-badge">
+                <span>An Official Government of Punjab Digital Initiative</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+                </button>
+            </div>
+        </div>
+    </section>
