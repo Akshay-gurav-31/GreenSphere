@@ -4,7 +4,7 @@
 window.SMARTFARMER_CONFIG = {
     // AI Configuration
     GEMINI_API_KEY: 'AIzaSyDSX-GdXVJZLyJvQ1aoDy5T7RZc53Ugz7I',
-    GEMINI_ENDPOINT: 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent',
+    GEMINI_ENDPOINT: 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent',
     
     // Weather Configuration
     WEATHER_API_KEY: 'ade4fad075f0334719ade4ed00aa8536',
@@ -16,7 +16,7 @@ window.SMARTFARMER_CONFIG = {
     
     // Vision API Configuration (for soil image analysis)
     VISION_API_KEY: 'AIzaSyCLc_LRc2giTjUkG0p7kez2nAKN4JOttZ8', // Using same Gemini key for vision
-    VISION_ENDPOINT: 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-vision:generateContent',
+    VISION_ENDPOINT: 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent',
     
     // Application Settings
     MAX_IMAGES: 3,
