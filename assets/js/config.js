@@ -3,7 +3,7 @@
 
 window.SMARTFARMER_CONFIG = {
     // AI Configuration
-    GEMINI_API_KEY: 'AIzaSyCLc_LRc2giTjUkG0p7kez2nAKN4JOttZ8',
+    GEMINI_API_KEY: 'AIzaSyDSX-GdXVJZLyJvQ1aoDy5T7RZc53Ugz7I',
     GEMINI_ENDPOINT: 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent',
     
     // Weather Configuration
